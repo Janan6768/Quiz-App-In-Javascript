@@ -1,0 +1,191 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Flex container to center the card vertically & horizontally */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f9;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  font-size: 16px;
+  min-height: 100vh; /* ensure full viewport height */
+  box-sizing: border-box;
+}
+
+/* Container styles */
+.container {
+  max-width: 500px;
+  width: 95vw; /* make container width relative to viewport width */
+  max-height: 95vh; /* prevent container from overflowing vertically */
+  padding: 20px 15px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow-y: auto; /* scroll if content is taller than viewport */
+  box-sizing: border-box;
+}
+
+/* Optional: scroll style for overflow */
+.container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+h1 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+#questionBox {
+  margin-bottom: 25px;
+  font-size: 1.25rem;
+  min-height: 70px;
+  line-height: 1.4;
+  padding: 0 10px;
+}
+
+#options button {
+  display: block;
+  width: 100%;
+  padding: 15px 10px;
+  margin: 12px 0;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: #e4e4e4;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+  font-weight: 500;
+  color: #333;
+  user-select: none;
+}
+
+#options button:hover,
+#options button:focus {
+  background-color: #d0d0d0;
+  outline: none;
+}
+
+#resultBox h2 {
+  margin-top: 30px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.buttons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+button#restartBtn,
+button#viewAnswersBtn {
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  min-width: 140px;
+  box-shadow: 0 3px 7px rgb(0 0 0 / 0.2);
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+button#restartBtn {
+  background-color: #007bff;
+}
+
+button#restartBtn:hover {
+  background-color: #0056b3;
+}
+
+button#viewAnswersBtn {
+  background-color: #28a745;
+}
+
+button#viewAnswersBtn:hover {
+  background-color: #1e7e34;
+}
+
+#answersBox {
+  text-align: left;
+  margin-top: 30px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  padding: 0 5px;
+}
+
+#answersBox div {
+  background: #f9f9f9;
+  padding: 15px 12px;
+  margin-bottom: 12px;
+  border-left: 5px solid #ccc;
+  border-radius: 5px;
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #questionBox {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  #options button {
+    padding: 14px 10px;
+    font-size: 1rem;
+    margin: 10px 0;
+    border-radius: 6px;
+  }
+
+  button#restartBtn,
+  button#viewAnswersBtn {
+    min-width: 120px;
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  #resultBox h2 {
+    font-size: 1.3rem;
+  }
+
+  .buttons {
+    gap: 12px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+  #options button {
+    font-size: 0.95rem;
+    padding: 12px 8px;
+    margin: 8px 0;
+  }
+
+  button#restartBtn,
+  button#viewAnswersBtn {
+    min-width: 100px;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+}
